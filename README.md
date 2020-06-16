@@ -24,7 +24,7 @@ It will allow you to setup quickly a new wordpress project based on [roots/bedro
 
 The easier way to create a new project is to use the _init.sh_ bashscript:
 ```shell script
-git clone git@github.com:avallete/phpstorm-wordpress-docker-starter.git phpstorm-wordpress-docker-starter
+git clone git@github.com:avallete/phpstorm-wordpress-docker-starter.git
 cd phpstorm-wordpress-docker-starter/cli
 ./init.sh
 ```
