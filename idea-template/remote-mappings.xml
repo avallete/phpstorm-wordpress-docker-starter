@@ -17,6 +17,13 @@
             </list>
           </settings>
         </remote-mappings>
+        <remote-mappings server-id="php@%INTERPRETER_COMPOSER_UUID%">
+          <settings>
+            <list>
+              <mapping local-root="$PROJECT_DIR$" remote-root="/var/www/html" />
+            </list>
+          </settings>
+        </remote-mappings>
       </list>
     </list>
   </component>
