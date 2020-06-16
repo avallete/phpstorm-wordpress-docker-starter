@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution>
+      <interpreter name="composer" composer="composer" />
+    </execution>
+  </component>
+  <component name="DrupalConfiguration">
+    <drupalPath />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JoomlaConfiguration">
+    <joomlaConfigPath />
+    <joomlaPath />
+  </component>
+  <component name="PhpDebugGeneral" xdebug_debug_port="%XDEBUG_PORT%" listening_started="true" />
+  <component name="PhpServers">
+    <servers>
+      <server host="%DOMAIN%" id="%HTTP_SERVER_UUID%" name="http %DOMAIN%" use_path_mappings="true">
+        <path_mappings>
+          <mapping local-root="$PROJECT_DIR$" remote-root="/var/www/html" />
+        </path_mappings>
+      </server>
+      <server host="%DOMAIN%" id="%HTTPS_SERVER_UUID%" name="https %DOMAIN%" port="%NGINX_HTTPS_PORT%" use_path_mappings="true">
+        <path_mappings>
+          <mapping local-root="$PROJECT_DIR$" remote-root="/var/www/html" />
+        </path_mappings>
+      </server>
+    </servers>
+  </component>
+  <component name="PhpWebServerValidation" path_to_validation_script="$PROJECT_DIR$" selected_validation_type="LOCAL" web_path_to_validation_script="https://%DOMAIN%:%NGINX_HTTPS_PORT%" />
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="wordpress">
+    <include_path>
+    </include_path>
+  </component>
+  <component name="ProjectId" id="%PROJECT_ID%" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../docker-compose.yml" />
+    <property name="settings.editor.selected.configurable" value="settings.php.frameworks" />
+  </component>
+  <component name="RunManager" selected="PHP Remote Debug.XDebug https">
+    <configuration name="XDebug http" type="PhpRemoteDebugRunConfigurationType" factoryName="PHP Remote Debug" filter_connections="FILTER" server_name="http %DOMAIN%" session_id="PHPSTORM">
+      <method v="2" />
+    </configuration>
+    <configuration name="XDebug https" type="PhpRemoteDebugRunConfigurationType" factoryName="PHP Remote Debug" filter_connections="FILTER" server_name="https %DOMAIN%" session_id="PHPSTORM">
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Docker.development-stack-deploy" />
+      <item itemvalue="PHP Remote Debug.XDebug http" />
+      <item itemvalue="PHP Remote Debug.XDebug https" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WordPressConfiguration" enabled="true">
+    <wordpressPath>$PROJECT_DIR$/web/wp/</wordpressPath>
+  </component>
+</project>
