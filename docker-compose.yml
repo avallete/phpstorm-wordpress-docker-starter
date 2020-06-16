@@ -8,9 +8,9 @@ services:
       - '${NGINX_HTTP_PORT}:${NGINX_HTTP_PORT}'
       - '${NGINX_HTTPS_PORT}:${NGINX_HTTPS_PORT}'
     volumes:
-    - ./nginx/default.conf:/tmp/default.template:rw
-    - ./src/${APP_NAME}:/var/www/html:rw
-    - ./certs:/etc/certs
+      - ./nginx/default.conf:/tmp/default.template:rw
+      - ./src/${APP_NAME}:/var/www/html:rw
+      - ./certs:/etc/certs
     depends_on:
       - wordpress
     restart: always
@@ -42,9 +42,9 @@ services:
     volumes:
       - ./src/${APP_NAME}:/var/www/html:rw
       - ./config/php.ini:/usr/local/etc/php/conf.d/php.ini
-#    ports:
-#      # Expose XDebug debugger
-#      - '${XDEBUG_PORT}:9042'
+    #    ports:
+    #      # Expose XDebug debugger
+    #      - '${XDEBUG_PORT}:9042'
     environment:
       XDEBUG_CONFIG: "idekey=PHPSTORM remote_host=192.168.0.11 profiler_enable=1"
 
@@ -72,3 +72,8 @@ services:
     user: ${CONTAINER_USER}
     volumes:
       - ./src/${APP_NAME}:/var/www/html:rw
+      - cache-data:/tmp:cached
+
+volumes:
+  cache-data:
+
