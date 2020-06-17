@@ -46,7 +46,7 @@ services:
     #      # Expose XDebug debugger
     #      - '${XDEBUG_PORT}:9042'
     environment:
-      XDEBUG_CONFIG: "idekey=PHPSTORM remote_host=192.168.0.11 profiler_enable=1"
+      XDEBUG_CONFIG: "idekey=PHPSTORM profiler_enable=1"
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:latest
