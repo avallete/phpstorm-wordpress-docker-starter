@@ -7,6 +7,7 @@ RUN set -ex; \
 	\
 	apt-get update; \
 	apt-get install -y --no-install-recommends \
+	    less \
 		libjpeg-dev \
 		libmagickwand-dev \
 		libpng-dev \
@@ -66,7 +67,6 @@ RUN { \
 
 # Setup XDEBUG config
 RUN { \
-		echo 'xdebug.remote_port = 9042'; \
 		echo 'xdebug.remote_enable = on'; \
 		echo 'xdebug.remote_connect_back = on'; \
 		echo 'xdebug.profiler_output_dir="/var/www/html"'; \
@@ -77,6 +77,10 @@ RUN curl -o /bin/wp-cli.phar https://raw.githubusercontent.com/wp-cli/builds/gh-
 RUN chmod +x /bin/wp-cli.phar
 RUN cd /bin && mv wp-cli.phar wp
 RUN mkdir -p /var/www/.wp-cli/cache && chown www-data:www-data /var/www/.wp-cli/cache
+RUN apt-get update && \
+    apt-get install -y less && \
+    apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false && \
+    rm -rf /var/lib/apt/lists/*
 
 VOLUME /var/www/html
 EXPOSE 9042
